@@ -1,18 +1,27 @@
+<?php
+declare(strict_types=1);
+
+require_once __DIR__ . '/../src/datos/RepositorioProductos.php';
+require_once __DIR__ . '/../src/utilidades/vistas.php';
+
+$repositorio = new RepositorioProductos(__DIR__ . '/../datos/datos.json');
+$destacados = array_slice($repositorio->obtenerTodos(), 0, 3);
+?>
 <!doctype html>
 <html lang="es">
 <head>
-    <meta charsrt="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tienda tec</title>
+    <title>Tienda Tec</title>
     <link rel="stylesheet" href="assets/css/estilos.css">
 </head>
 <body>
     <header>
-        <h1>bienvenido a tienda tec</h1>
+        <h1>Bienvenido a Tienda Tec</h1>
         <nav aria-label="principal">
             <ul>
                 <li><a href="index.php" aria-current="page">Inicio</a></li>
-                <li><a href="productos.php">Catalogo</a></li>
+                <li><a href="productos.php">Catálogo</a></li>
                 <li><a href="contacto.php">Contacto</a></li>
             </ul>
         </nav>
@@ -20,12 +29,16 @@
     <main>
         <section>
             <h2>Productos destacados</h2>
-            <p>Encuentra los mejores productos en tienda TEC</p>
+            <p>Encuentra los mejores productos en Tienda Tec</p>
+            <section class="tarjetas-productos">
+                <?php foreach ($destacados as $producto): ?>
+                    <?php mostrarTarjetaProducto($producto, 3); ?>
+                <?php endforeach; ?>
+            </section>
         </section>
     </main>
     <footer>
-        <p>&copy; 2026 tienda Tec. todos los derechos reservados</p>
+        <p>&copy; 2026 Tienda Tec. Todos los derechos reservados</p>
     </footer>
 </body>
 </html>
-

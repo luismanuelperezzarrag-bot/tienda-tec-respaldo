@@ -1,18 +1,56 @@
 [
-    {
-        "id": 1,
-        "nombre": "Mouse Inalámbrico",
-        "categoria": "Periféricos",
-        "precio": 499.00,
-        "descripcion": "Mouse inalámbrico con alta precisión y diseño ergonómico.",
-        "stock": 25
-    },
-    {
-        "id": 2,
-        "nombre": "Teclado Mecánico",
-        "categoria": "Periféricos",
-        "precio": 899.00,
-        "descripcion": "Teclado mecánico con retroiluminación RGB y switches de alta calidad.",
-        "stock": 12
-    }
+  {
+    "id": 1,
+    "nombre": "Mouse Inalámbrico",
+    "categoria": "Periféricos",
+    "precio": 499.00,
+    "descripcion": "Mouse inalámbrico con alta precisión y diseño ergonómico.",
+    "stock": 25,
+    "imagen": "https://placehold.co/200x150?text=Mouse"
+  },
+  {
+    "id": 2,
+    "nombre": "Teclado Mecánico",
+    "categoria": "Periféricos",
+    "precio": 899.00,
+    "descripcion": "Teclado mecánico con retroiluminación RGB y switches de alta calidad.",
+    "stock": 12,
+    "imagen": "https://placehold.co/200x150?text=Teclado"
+  },
+  {
+    "id": 3,
+    "nombre": "Audífonos Gamer",
+    "categoria": "Audio",
+    "precio": 650.00,
+    "descripcion": "Audífonos con sonido envolvente 7.1 y micrófono con cancelación de ruido.",
+    "stock": 8,
+    "imagen": "https://placehold.co/200x150?text=Audifonos"
+  },
+  {
+    "id": 4,
+    "nombre": "Bocina Bluetooth",
+    "categoria": "Audio",
+    "precio": 780.00,
+    "descripcion": "Bocina portátil resistente al agua con ocho horas de batería.",
+    "stock": 0,
+    "imagen": "https://placehold.co/200x150?text=Bocina"
+  },
+  {
+    "id": 5,
+    "nombre": "Monitor Full HD 24\"",
+    "categoria": "Monitores",
+    "precio": 2450.00,
+    "descripcion": "Monitor IPS de 24 pulgadas a 75Hz con bordes ultradelgados.",
+    "stock": 5,
+    "imagen": "https://placehold.co/200x150?text=Monitor"
+  },
+  {
+    "id": 6,
+    "nombre": "Webcam HD 1080p",
+    "categoria": "Periféricos",
+    "precio": 520.00,
+    "descripcion": "Cámara web con enfoque automático y micrófono estéreo integrado.",
+    "stock": 15,
+    "imagen": "https://placehold.co/200x150?text=Webcam"
+  }
 ]

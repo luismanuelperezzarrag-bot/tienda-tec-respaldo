@@ -1,0 +1,9 @@
+# laboratorio de fallas u3s07
+
+| # | qué rompí | lo que predije | excepción y mensaje real | ¿el mensaje me orientó? |
+|---|---|---|---|---|
+| 1 | le cambié el nombre al archivo en la ruta (puse `dato.json` sin la `s`) | pensé que php iba a marcar error porque ese archivo no existe | `runtimeexception: no se encontró el archivo de datos: .../datos/dato.json` | sí, me dijo exactamente qué archivo estaba buscando y la ruta donde no lo encontró |
+| 2 | quité una coma entre dos productos en `datos.json` | supuse que al leer el json iba a tronar por un error de sintaxis | `jsonexception: syntax error` | más o menos, sí avisa que está mal escrito el json pero no te dice en qué línea está el fallo |
+| 3 | borré toda la línea de `"stock"` en uno de los registros del json | creí que al crear el objeto producto iba a fallar por faltarle un dato | `invalidargumentexception: el producto no tiene el campo stock` | sí, te dice directo cuál es el campo que hace falta para poder armar el producto |
+| 4 | mandé llamar `buscarporid(9999)` quitando el `try/catch` | pensé que saldría un error fatal porque no hay ningún producto con ese id | `fatal error: uncaught outofboundsexception: no existe un producto con id 9999.` | sí, queda muy claro que ese id no existe en la lista |
+| 5 | cambié el precio de un producto a texto (`"gratis"`) en el json | pensé que iba a marcar un error de tipo porque esperaba un número con decimales | no marcó ningún error, php convirtió `"gratis"` a `0` y en la página salió `$0.00` | no, porque no avisó nada. este es el peor fallo porque el programa sigue funcionando como si nada pero muestra un precio falso en la tienda sin que te des cuenta |
